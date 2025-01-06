@@ -1,0 +1,75 @@
+varibles:
+1.static typed and dynamic typed
+    1.varibles
+    2.varibles are used to store the data (any kinds of data)
+variables:
+1.Case-sensitive
+2.Start with letters,_(under_score),$(dollarsign)
+3.Can't start with numbers
+4.Reserved word(keywords)not allowed
+5.Allow letters,(under_score),$(dollarsign),numbers
+
+How to declare variables:
+->var
+->let
+->const
+
+1.reassigning with let is possible
+   .redeclaring with let is not acceptable
+     let a=1;
+     let a=5;
+     document.write(a+a)
+     console.log(a+a)
+    op:error
+
+2.reassigning with var is possible
+    .redeclaring with var is acceptable
+
+
+ var a=1;
+        a=5;
+        console.log(a+a)
+op:10
+
+3.reassigning with const not accepted
+
+
+*let a=11
+        {
+            let a=5
+            console.log(a+a)
+            document.write(a+a)//10
+        }
+        console.log(a+a)//6
+*var a=11
+        {
+            var a=5
+            console.log(a+a)
+            document.write(a+a)
+        }
+        console.log(a+a)//10
+
+
+<script>
+        var a=11
+        {
+            var a=5
+            console.log(a+a)
+            document.write(a+a)
+        }
+        console.log(a+a)
+    
+        
+        //var a=1;
+        //a=5;
+        //console.log(a+a)
+
+        //var a="ramya"
+        //a="kavya"
+        //a="sam"
+        //console.log(a)
+        //console.log(a)
+        //document.write(a)
+    </script>
+</body>
+</html>
