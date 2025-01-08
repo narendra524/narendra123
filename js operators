@@ -1,0 +1,94 @@
+JavaScripit Operators:
+
+1.Arithimetic: +,-,*,/
+Mulitiplication - *
+Division - /__(Q)
+Modulus Operator - %__(R)
+Exponential(raised the power) - **,+++
+
+1.Arithematic operators
+
+Example:
+       let a= 2
+       let b=3
+       document.write(a%b ,"<br>")
+        document.write(a/b) ,"<br>"
+output:
+2
+0.6666666666666666
+
+Ex:
+       let a= 10
+       let b=5
+       b-=30
+       document.write(b)
+       a+=30
+       document.write(a ,"<br>")
+        document.write(b) ,"<br>"
+ 
+output:
+-2540
+-25
+
+2.logical operators:
+
+and-&&
+T and T = T
+
+or-||
+T or F = F
+
+not -!  
+
+Logical Operators:
+Examples:
+ 1.      let a= 10
+       let b=5
+    
+       document.write(a>b)
+op:True
+
+
+ 2.      let a= 10
+       let b=5
+
+       document.write(a>b && b>11,"<br>")       
+       document.write(a>b || b>11,"<br>")
+       document.write(!(true),"<br>");
+       document.write(!(a>b),"<br>") 
+op:   
+false
+true
+false
+false
+
+  3.     let a= 105
+       let b='105'
+       document.write(a!=b,"<br>")
+       document.write(a>b && b>11,"<br>")
+       document.write(a>b || b>11,"<br>")
+
+       document.write(!(true),"<br>");
+      document.write(!(a>b),"<br>")
+op:
+false
+false
+true
+false
+true
+
+Relational (comparsion) values:
+<,>,>=,<=,==,===,!=,!===
+== =equality
+Conditional operator:Ternary Operator(?)
+First evalutesan expressions for a true or false;
+Syntax:
+condition:a1?a2
+Example:
+         let t=40
+         let r =(t>40)?"Ac-off":"Ac -on"
+         document.write(r)
+
+op:Ac -onfalse
+       
+
