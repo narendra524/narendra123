@@ -1,0 +1,78 @@
+conditional Statements:
+*To make the set of instructions execute only when the given condition is true
+*used to delete wheather the code has to be executed or skip based on the given condition
+*line-line(sequence)
+block of code: set of instructions
+execute only at specific condition
+
+condition: an expression that evaluates that evaluates a result(t or f)
+ex:console.log(5>6)
+Methods:
+if
+if-else
+else if
+switch ternary operator
+
+if:only one possible condition
+*if the condition is true it will executes otherwise it skips
+syntax:
+if(condition){
+block of code
+}
+
+ex:
+ 1.      let a=4
+       let b=5
+       if(a<b){
+        document.write("hello Reddy","<br>")
+       }
+       document.write("brilliant chiru")
+output:
+hello Reddy
+brilliant chiru
+
+2. condition false
+       let a=4
+       let b=5
+       if(a>b){
+        document.write("hello Reddy","<br>")
+       }
+       document.write("brilliant chiru")
+
+output:
+brilliant chiru
+
+Else:
+Ex:  
+      let a=4
+       let b=5
+       if(a>b){
+        document.write("hello Reddy","<br>")
+       }else{
+        document.write("hi sam")
+
+       }
+       document.write("brilliant chiru")
+op:
+hi sambrilliant chiru
+
+else-if:
+ex:
+
+      let age=prompt("enter your age")
+        let name=("enter your name")
+        if(age<18){
+            alert(name+"you are too young to marry")
+        
+        }
+        else if(age>35){
+            alert(name+"you are too old to marry")
+
+        }else{
+            alert(name+"perfect age  to marry")
+        }
+        alert("welcome to my world")
+
+
+ 
+ 
