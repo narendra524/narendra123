@@ -1,0 +1,106 @@
+1.write a program to check wheather the number is divisible by 2 and 3 and both (take prompt)
+
+let number = prompt("Enter a number:");
+
+number = parseInt(number);
+
+if (isNaN(number)) {
+  alert("Please enter a valid number.");
+} else {
+  
+  if (number % 2 === 0 && number % 3 === 0) {
+    alert("The number is divisible by both 2 and 3.");
+  } 
+
+  else if (number % 2 === 0) {
+    alert("The number is divisible by 2.");
+  } 
+  
+  else if (number % 3 === 0) {
+    alert("The number is divisible by 3.");
+  } 
+  
+  else {
+    alert("The number is not divisible by 2 or 3.");
+  }
+}
+
+2.write a program to find the largest number out of three numbers expected from the user
+
+let a = 11;
+let b = 2;
+let c = 3;
+
+if (a > b && a > c) {
+    console.log('a is the biggest number');
+} else if (b > a && b > c) {
+    console.log('b is the biggest number');
+} else {
+    console.log('c is the biggest number');
+}
+
+4.          function calculateBonus() {
+      
+            const salary = parseFloat(prompt("Enter your salary: "));
+            const yearsOfService = parseInt(prompt("Enter your years of service: "), 10);
+        
+            
+            if (isNaN(salary) || isNaN(yearsOfService) || salary <= 0 || yearsOfService < 0) {
+                console.log("Invalid input. Please enter valid salary and years of service.");
+                return;
+            }
+        
+            let bonusPercentage = 0;
+        
+            
+            if (yearsOfService > 10) {
+                bonusPercentage = 10;
+            } else if (yearsOfService >= 6) {
+                bonusPercentage = 7.5;
+            } else {
+                bonusPercentage = 5;
+            }
+        
+            const bonus = (bonusPercentage / 100) * salary;
+        
+            
+            console.log(`Based on ${yearsOfService} years of service, your bonus is: $${bonus.toFixed(2)} (${bonusPercentage}% of your salary).`);
+        }
+        
+       
+        calculateBonus();
+
+switch case:
+break:
+let i = 0;
+while (i < 5) {
+  i++;
+  if (i === 3) {
+    continue;  // Skip printing 3
+  }
+  console.log(i);
+}
+
+Output:
+1
+2
+4
+5
+
+continoue:
+for (let i = 1; i <= 5; i++) {
+  if (i === 2) {
+    continue;  // Skip 2
+  }
+  if (i === 4) {
+    break;  // Exit the loop when i is 4
+  }
+  console.log(i);
+}
+
+ Output:
+ 1
+ 3
+
+
+
