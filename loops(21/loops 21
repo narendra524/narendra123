@@ -1,0 +1,23 @@
+const a="REDDY"
+    for(let i in a){
+      document.write(a[i])
+    }
+
+    const b =["REDDy","yash","gani"]
+    for(let bb of b){
+      document.write(i+"</br>")
+    }
+
+ let i=2,n=8;
+    while(i<=n){
+      document.write(i+1+"<br>")
+      i=i+2
+    }
+ let i=1,n=8;
+    do{
+      document.write(i+1+"<br>")
+      i=i+2
+    }
+    while(i<=n){
+      
+    }
