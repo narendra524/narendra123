@@ -1,0 +1,86 @@
+for(let i=1;i<=8;i=i+2){
+if(i>5){
+continoue
+}
+console.log(i+1)
+}
+#i=1;3;5;7
+#c=1<=8,3<8;5<=8;7<=8 #T
+#u=i+2;1+2=3;3+2=5;5+2=7
+#B=i+1;1+1=2;3+1=4;5+1=6;
+op:2,4,6
+
+2.for(let i=2;i<=8;i=i+1){
+if(i>5){
+continoue
+}
+console.log(i+2)
+}
+
+#i=2 3 4 5 6 7 
+#c=2<=8
+#u=i+1
+#B=i+2;2+2=4;5;6;7
+op:4,5,6,7
+
+NESTED LOOPS:
+*A loop inside the another loop
+*the inner loops will excute one time for each iteration of outer loop
+*An inner loop within the repating block of outer loop
+
+//outer loop
+
+for(let i=1;i<=3;i++){
+document.write(i,"<br>");
+
+for(let j=1;j<=4;j++){
+document.write(j," ");
+}
+
+document.write("<br>");
+
+op:
+1
+1 2 3 4
+2
+1 2 3 4
+3
+1 2 3 4
+#patterns
+let rows = 5;  
+for (let i = 1; i <= rows; i++) {
+  let output = '';
+  for (let j = 1; j <= i; j++) {
+    output += '*';
+  }
+  console.log(output);
+}
+
+op:
+*
+**
+***
+****
+*****
+
+#pyramid patterns
+let rows = 5;  
+for (let i = 1; i <= rows; i++) {
+  let output = '';
+  
+  for (let j = 1; j <= rows - i; j++) {
+    output += ' ';
+  }
+  
+  for (let j = 1; j <= (2 * i - 1); j++) {
+    output += '*';
+  }
+  console.log(output);
+}
+op:
+    *
+   ***
+  *****
+ *******
+*********
+
