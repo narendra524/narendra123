@@ -1,0 +1,63 @@
+CALLBACK:
+you can pass the callback function as argument to another function
+Execution:
+the function receiving the callback at some point during its execution
+(often at the end or after an asynchronous operation is done)
+EX:
+function mainFunction(callback){
+console.log("Executing main function")
+callback()
+}
+function callbackFunction(){
+console.log("callbackfunction executed")
+}
+mainFunction(callbackFunction)
+
+op:
+Executing main function
+callbackfunction executed
+
+exp:
+mainfunction takes a callback as parameters
+callbackFunction is passed in main function
+inside the mainFunction,the callfunction function is called with callback()
+
+ex2:
+passing a named function as callback
+function greet(name,callback){
+console.log("hello"+name);
+callback();
+}
+function goodbye(){
+console.log("Goodbye!")
+}
+greet("Reddy",goodbye)
+
+op:
+helloReddy
+
+ex3:using an anonymous function as callback;
+let numbers = [1, 2, 3, 4, 5];
+let squaredNumbers = numbers.map(function (num) {
+  return num * num;
+});
+console.log(squaredNumbers);
+
+op:
+[1, 2, 3, 4, 5]
+
+ex4:Asynchronous callback with settimeout
+function fecthData(callback){
+console.log("Fetching data...")
+}
+setTimeout(function(){
+console.log("data fetched...");
+callback()
+}2000);
+function processData(){
+console.log("processing the feteched data....")
+}
+fetchData(processData);
+op:
+data fetched
+
