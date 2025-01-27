@@ -1,0 +1,63 @@
+Promise:
+A promise is a special javascript object that represent eventual completion (or failure) of an asynchronous Operation
+1.Three states
+1.pending:the initial state , the promises is still waiting for the operation to finish
+2.Fulfilled:the operation completed successfully
+3.Rejected:the operation failed
+
+Exp:
+To create a promise new promise();
+the promises constructor takes a function with two parameters:
+resolve--to mark as the  promise is successful
+reject--to mark is as failed
+
+Handling:
+then () method is called when the promise is fulfilled
+it receives the result from the resolve();
+.catch()method is called when promise is rejected;
+It receives the result from the reject();
+
+
+EX:
+let myPromise=new promise((resolve, reject)=>{
+let success=true
+if(success){
+resolve("The Operation was successfully")
+}else{
+reject()
+}
+});
+mypromise
+.then(result=>{
+console.log(result)
+})            
+.catch(error=>{
+console.log(error)
+})
+
+op:
+The operation was successfully                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+1.promises with setTimeout:
+using settimeout the promises will resolve after the certain amount of time
+function delayWithCondition(ms, condition) {
+  return new Promise((resolve, reject) => {
+    if (condition) {
+      setTimeout(() => {
+        resolve(`Resolved after ${ms}ms because the condition was true`);
+      }, ms);
+    } else {
+      reject(`Rejected immediately because the condition was false`);
+    }
+  });
+}
+
+// Usage
+let delayTime = 2000; let shouldResolve = true;
+delayWithCondition(delayTime, shouldResolve)
+  .then((message) => {
+    console.log(message);   })
+  .catch((error) => {
+    console.error(error); 
+  });
+
