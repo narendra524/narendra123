@@ -1,0 +1,92 @@
+DOM(Document Object model):
+it is a programming interface in web development that allows us to interact and manipulate (change) the html  documents
+When webpage is loaded,the browser  creates the dom of webpage
+when an html file is loaded into the browser, the js cannot understand the html document directly
+DOM:is basically representation of the same document but in the form of a tree like structure composed of different objects
+HTML DOM llows the js to access the element and modify all the elements in html document
+
+Keypoints:
+1.structure: the Dom represents the structure of Html Document as treerepresent the element,an attribute,text
+2.manipulation:using js,you can interact with elements(button,h,p)we can modify ,add,remove elements change styles;
+3.Event handling:
+4.world wide web consortium
+
+In Dom all html elements are defined objects
+property:is a value that you  can set to the objects(Like changing content of an html elements)
+methods:an action like (add or delete)
+methods of document object:
+getting elements:
+1.getting an element by id
+2.geing an element by class
+3.geing an element by tagname
+4.geing an element by query selector
+
+<h1 class="a">Mallikarjunarao</h1>
+<h1 class="b">gopi</h1>
+<h1 class="c">ganesh</h1>
+<h1 class="d">nani</h1>
+<h1 class="e">yash</h1>
+<h1 class="f">raviteja</h1>
+<h1 class="g">venky</h1>
+<h1 class="h">narendra</h1>
+<h1 class="i">anwar</h1>
+<h1 class="j">chandra</h1>
+<h1 class="k">sravan</h1>
+<style>
+.a{
+    color: green;
+    text-align: center;
+
+}
+.b{
+    color: red;
+    text-align: center;
+    
+}
+.c{
+    color: black;
+    text-align: center;
+    
+}
+.d{
+    color: blue;
+    text-align: center;
+    
+}
+.e{
+    color: navy;
+    text-align: center;
+    
+}
+.f{
+    color: yellow;
+    text-align: center;
+    
+}
+.g{
+    color: orange;
+    text-align: center;
+    
+}
+.h{
+    color: green;
+    text-align: center;
+    
+}
+.i{
+    color: red;
+    text-align: center;
+    
+}
+.j{
+    color: aqua;
+    text-align: center;
+    
+}
+.k{
+    color: violet;
+    text-align: center;
+    
+}
+
+</style>
