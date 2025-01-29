@@ -1,0 +1,111 @@
+<h1 class="a">Mallikarjunarao</h1>
+<h1 class="b">gopi</h1>
+<h1 class="c">ganesh</h1>
+<h1 class="d">nani</h1>
+<h1 class="e">yash</h1>
+<h1 class="f">raviteja</h1>
+<h1 class="g">venky</h1>
+<h1 class="h">narendra</h1>
+<h1 class="i">anwar</h1>
+<h1 class="j">chandra</h1>
+<h1 class="k">sravan</h1>
+<style>
+.a{
+    color: green;
+    text-align: center;
+
+}
+.b{
+    color: red;
+    text-align: center;
+    
+}
+.c{
+    color: black;
+    text-align: center;
+    
+}
+.d{
+    color: blue;
+    text-align: center;
+    
+}
+.e{
+    color: navy;
+    text-align: center;
+    
+}
+.f{
+    color: yellow;
+    text-align: center;
+    
+}
+.g{
+    color: orange;
+    text-align: center;
+    
+}
+.h{
+    color: green;
+    text-align: center;
+    
+}
+.i{
+    color: red;
+    text-align: center;
+    
+}
+.j{
+    color: aqua;
+    text-align: center;
+    
+}
+.k{
+    color: violet;
+    text-align: center;
+    
+}
+
+</style>
+
+2.<body>
+	<h1 class="a">malli</h1>
+	<h1 class="b">nani</h1>
+	<h1 class="c">gopi</h1>
+	<h1 class="d">yash</h1>
+	<style>
+	    .a{
+	        background-color: red;
+	    }
+	    .b{
+	        background-color: green;
+	    
+	    }
+	    .c{
+	        background-color: blue;
+	    }
+	    .d{
+	        background-color: aqua;
+	    }
+	</style>
+	    <script>
+	    let x=document.createElement('h2');
+	    x.className='e'
+	    x.textContent="hello yaswanth, you are very good and excellent in coding and also very good in spelling writing"
+	    document.write(x);
+	    
+	</script>
+	</body>
+	
+	Output:
+"hello yaswanth, you are very good and excellent 
+3.<h1 class="a">malli</h1>
+<h3 class="b">nani</h1>
+<h3 class="a">gopi</h1>
+<h3 class="b">yash</h1>
+    <script>
+    let x=document.querySelector('h1');
+    document.write(x);
+    
+
+</script>
