@@ -1,0 +1,36 @@
+DOM:
+1.Create Element
+1.Single Element
+2.multiple elements
+How to remove child Elements from a parent Node
+Remove child()-to remove the elements
+ex:
+let ul=document.querySelector("ul")
+      let list=document.querySelectorAll("li")
+      console.log(ul)
+      console.log(list)
+      for( let i of list){
+        console.log(removing:${i.textContent})
+        ul.removeChild(i)
+        console.log(i)
+      }
+      console.log(list)
+
+2.to append 
+<div id="a">
+        <h1>RAVITEJA</h1>
+        <h1>GANESH</h1>
+    </div>
+    <div id="b">
+        <h1>YASH</h1>
+        <h1>GOPI</h1>
+        <h1>NANI</h1>
+        
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.textContent="MALLI"
+        let p=document.getElementById('b')
+        p.appendChild(n)
+        document.write(p.innerText)
+</script>
