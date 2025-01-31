@@ -1,0 +1,37 @@
+EX:1.
+<div id="a">
+    <h1>VENKATESH</h1>
+    <h1>GANESH</h1>
+</div>
+<div id="b">
+    <h1 id="r">RAVI</h1>
+    <h1 >GOPI</h1>
+    <h1>NANI</h1>
+    
+</div>
+<script>
+    let n=document.createElement('h1')
+    n.textContent="MALLI"
+    let p=document.getElementById('b')
+    let l=document.getElementById('r')
+    p.insertBefore(n,l)
+</script>
+EX:2.
+<div id="a">
+        <h1 id="h">ravi</h1>
+        <h1 id="r">sumanth</h1>
+      </div>
+   <script>
+    let a=document.createElement("h1")
+    a.textContent="taswan"
+    let p=document.getElementById("a")
+    let c=document.getElementById("r")
+    p.insertBefore(a,c)
+
+    /// to insert malli before ravi
+    let b=document.createElement("h1")
+    b.textContent="hdds"
+    let p2=document.getElementById("a")
+    let c2=document.getElementById("h")
+    p2.insertBefore(b,c2)
+   </script>
