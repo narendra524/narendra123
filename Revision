@@ -1,0 +1,53 @@
+1.JavaScript
+2.React JS
+3.Frontend-projects
+4.sprinigboot;java
+5.mysql
+6.material UI
+7.End-End Projects
+
+JAVASCRIPT:
+1.Variables
+let,var,const
+
+js revision practice questions:
+1.Voting Eligibility System 
+1.age eligibility
+
+        let age = parseInt(prompt("Enter your age:"))
+        
+        if(age>=18 ){
+            let citizen = confirm("Are you a citizen?")
+        let passedCitizenTest = confirm("Have you passed citizen test?")
+            document.write("You are eligible to vote")
+            
+            if(age>=18 && !citizen && passedCitizenTest){
+                document.write("You are eligible to vote")
+            }
+
+        }else{
+            document.write("You are not eligible to vote")
+        }
+op:
+your eligible to vote
+
+2.Discount Eligibility:
+let amount=prompt("Enter the amount customer spends")
+    if(amount>100){
+        let discount=amount*0.2
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+    }
+    else if(amount>50 && amount<=100){
+        let discount=amount*0.1
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+    }
+    let customer=confirm("are you premium number?")
+    if(customer){
+        let discount=amount*0.05
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+    }
+op:
+The final bill is:90The final bill is:95
