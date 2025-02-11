@@ -1,0 +1,79 @@
+import React from "react";
+import ProfileCard from "./ProfileCard";
+
+const users = [
+  { name: "Narendra Reddy", greeting: "Hello, world!", imageSrc: "data:image/jpeg;base64,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" },
+  { name: "Anwar Basha", greeting: "Nice to meet you!", imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIxM7-N98qgYSzs_BPV9o4Q6mofE95Qrk-3A&s" },
+  { name: "Adithya", greeting: "Welcome to my profile!", imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_UJWJI6YhK30X9irqRKyT6zbTeS-zyGC-Jw&s" },
+];
+
+const App = () => {
+  return (
+    <div className="flex gap-4 justify-center mt-10">
+      {users.map((user, index) => (
+        <ProfileCard key={index} {...user} />
+      ))}
+    </div>
+  );
+};
+
+export default App;
+
+
+import React from "react";
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="border p-4 rounded-lg shadow-md text-center w-64">
+      <img src={imageSrc} alt={name} className="w-24 h-24 rounded-full mx-auto" />
+      <h2 className="text-lg font-bold mt-2">{name}</h2>
+      <p className="text-gray-600">{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+
+.app-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: green;
+  }
+  
+  .profile-card {
+    background: blue;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+  }
+  
+  .profile-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: aqua;
+  }
+  
+  .profile-greeting {
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 5px;
+    background-color: navy;
+  }
