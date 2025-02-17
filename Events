@@ -1,0 +1,60 @@
+import React, { useState } from "react";
+import "./App.css";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const handleChange = (event) => {
+    setCount(Number(event.target.value)); // Ensuring the value is a number
+  };
+
+  const incrementCount = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  return (
+    <div className="container">
+      <input type="number" value={count} onChange={handleChange} />
+      <p>Count: {count}</p>
+      <button onClick={incrementCount}>Increment</button>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
