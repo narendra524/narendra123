@@ -1,0 +1,103 @@
+package com.mru.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Mobiles {
+@Id
+
+private int id;
+private String pname;
+private double pcost;
+private String pimage;
+private int pqty;
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getPname() {
+	return pname;
+}
+public void setPname(String pname) {
+	this.pname = pname;
+}
+public double getPcost() {
+	return pcost;
+}
+public void setPcost(double pcost) {
+	this.pcost = pcost;
+}
+public String getPimage() {
+	return pimage;
+}
+public void setPimage(String pimage) {
+	this.pimage = pimage;
+}
+public int getPqty() {
+	return pqty;
+}
+public void setPqty(int pqty) {
+	this.pqty = pqty;
+}
+@Override
+public String toString() {
+	return "Mobiles [id=" + id + ", pname=" + pname + ", pcost=" + pcost + ", pimage=" + pimage + ", pqty=" + pqty
+			+ "]";
+}
+public Mobiles() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Mobiles(int id, String pname, double pcost, String pimage, int pqty) {
+	super();
+	this.id = id;
+	this.pname = pname;
+	this.pcost = pcost;
+	this.pimage = pimage;
+	this.pqty = pqty;
+}
+
+}
+package com.mru.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.mru.entity.Mobiles;
+
+public interface MRURepo extends JpaRepository<Mobiles, java.lang.Integer> {
+
+}
+package com.mru.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mru.entity.Mobiles;
+import com.mru.repo.MRURepo;
+
+@Service
+public class MRUService {
+	
+	@Autowired
+	
+	private MRURepo repo;
+	
+	public List<Mobiles> getAllMobiles(){
+		return repo.findAll();
+	}
+
+}
+
+spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
+spring.datasource.username=root
+spring.datasource.password=mysql
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+server.port=8081
