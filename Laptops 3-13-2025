@@ -1,0 +1,55 @@
+Laptops.jsx
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+const Laptops = () => {
+    const [laptops, setLaptops] = useState([]);
+    const [error, setError] = useState(null);
+
+    const getLaptops = async () => {
+        try {
+            const result = await axios.get("http://localhost:8081/laptops");
+            setLaptops(result.data);
+        } catch (error) {
+            console.error("Error fetching laptops:", error);
+            setError("Failed to fetch laptops. Please try again.");
+        }
+    };
+
+    useEffect(() => {
+        getLaptops();
+    }, []);
+
+    return (
+        <div className="parent">
+            {error && <p className="error">{error}</p>}
+            {laptops.map((laptop) => (
+                <div className="child" key={laptop.id || laptop.pname}>
+                    <img src={laptop.pimage} alt={laptop.pname} style={{ width: "150px", height: "150px" }} />
+                    <h1>{laptop.pqty}</h1>
+                    <h4>{laptop.pname}</h4>
+                    <h4>{laptop.pcost}</h4>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default Laptops;
+
+main.jsx:
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import Mobiles from './components/Mobiles.jsx'
+import Laptops from './components/Laptops.jsx'
+import Watches from './components/Watches.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <>
+    <Mobiles></Mobiles>
+    <Laptops></Laptops>
+    <Watches></Watches>
+  </>
+)
+
